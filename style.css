@@ -1,0 +1,28 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+:root{
+    --agendaBoxSize: 20px;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+tbody{
+    display: flex;
+    flex-direction: column;
+}
+
+td{
+    background-color: orangered;
+    height: var(--agendaBoxSize);
+    width: var(--agendaBoxSize);
+    text-align: center;
+    border: none;
+}
