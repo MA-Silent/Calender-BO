@@ -76,7 +76,7 @@ function makeCalender(month, year){
                         sort--;
                     }
 
-                    if(count == new Date().getDate() && month == new Date().getMonth()+1){
+                    if(count == new Date().getDate() && month == new Date().getMonth()+1 && year == new Date().getFullYear()){
                         data.classList.add('Activeday')
                     }
 
