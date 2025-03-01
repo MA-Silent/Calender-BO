@@ -5,7 +5,8 @@ html,body{
 }
 
 :root{
-    --agendaBoxSize: 20px;
+    /* 30px default */
+    --Size: 30px;
 }
 
 body{
@@ -14,15 +15,98 @@ body{
     align-items: center;
 }
 
+#calender{
+    border-radius: 15px;
+    border: none;
+    background-color: rgba(255, 103, 48, 0.678);
+    padding: calc(var(--Size)/4);
+}
+
+#backB{
+    height: fit-content;
+    width: auto;
+    align-self: center;
+}
+
+#forwardB{
+    align-self: center;
+    height: fit-content;
+    width: auto;
+}
+
 tbody{
     display: flex;
     flex-direction: column;
 }
 
-td{
-    background-color: orangered;
-    height: var(--agendaBoxSize);
-    width: var(--agendaBoxSize);
+td.day.Activeday{
+    background-color: rgb(59, 216, 255);
+    opacity: 1.0;
+}
+
+td.day{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0.8;
+    border-radius: 50%;
+    height: var(--Size);
+    width: var(--Size);
     text-align: center;
     border: none;
+}
+
+td.dayHead{
+    text-align: center;
+    height: var(--Size);
+    width: var(--Size);
+    cursor: default;
+    border: none;
+    /* background-color: red; */
+}
+
+td.placeholder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
+    border: none;
+    text-align: center;
+    height: var(--Size);
+    width: var(--Size);
+}
+
+tr#yearTr{
+    display: flex;
+    justify-content: space-between;
+}
+
+th{
+    border: none;
+}
+
+#backB{
+    order: 1;
+}
+
+#calender{
+    order: 2;
+}
+
+#forwardB{
+    order: 3;
+}
+
+.svg{
+    width: 2em;
+    height: 2em;
+    vertical-align: -0.125em;
+}
+
+main{
+    display: flex;
+    width: calc(100vw /5);
+    justify-content: space-between;
+    flex-direction: row;
 }
