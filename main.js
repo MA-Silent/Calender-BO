@@ -19,6 +19,7 @@ function makeCalender(month, year){
     if(document.getElementById('calender')){
         document.getElementById('calender').remove();
     }
+    let months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
     let sort = 7;
     let count=1;
     let startedDay = startDay(month, year);
@@ -52,7 +53,7 @@ function makeCalender(month, year){
 
     const monthText = document.createElement('th');
     yearLine.appendChild(monthText);
-    monthText.innerText = `Month: ${month}`;
+    monthText.innerText = `${months[month-1]}`;
     
     tblBody.appendChild(yearLine);
     tblBody.appendChild(days);
